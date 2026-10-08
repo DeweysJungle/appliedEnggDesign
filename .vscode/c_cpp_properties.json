@@ -8,29 +8,29 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/Users/jon.cole/Documents/education/ME 574 - Senior Design I/code/include",
-                "/Users/jon.cole/Documents/education/ME 574 - Senior Design I/code/src",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/cores/arduino",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/variants/standard",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/carde/OneDrive/Documents/GitHub/appliedEnggDesign/include",
+                "C:/Users/carde/OneDrive/Documents/GitHub/appliedEnggDesign/src",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/variants/standard",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/Users/jon.cole/Documents/education/ME 574 - Senior Design I/code/include",
-                    "/Users/jon.cole/Documents/education/ME 574 - Senior Design I/code/src",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/cores/arduino",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/variants/standard",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                    "/Users/jon.cole/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/carde/OneDrive/Documents/GitHub/appliedEnggDesign/include",
+                    "C:/Users/carde/OneDrive/Documents/GitHub/appliedEnggDesign/src",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/carde/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                     ""
                 ]
             },
@@ -45,7 +45,7 @@
             ],
             "cStandard": "gnu11",
             "cppStandard": "gnu++11",
-            "compilerPath": "/Users/jon.cole/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerPath": "C:/Users/carde/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
                 "-mmcu=atmega328p",
                 ""

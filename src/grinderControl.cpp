@@ -1,10 +1,20 @@
 #include <Arduino.h>
 #include <grinderControl.hpp>
 
+#define srgPin A0   //pin reading voltage divider for photoresistor
+
+bool checkStorage(){            //Check if enough beans are available for next cup
+    if(analogRead(srgPin)>100){ //Arbitrary number that will be determined w/ testing
+        return false;           //Return false if the sensor is uncovered by beans
+    }
+    return true;
+}
+
 void setup() {
     pinMode(GRINDER_PIN, OUTPUT);
     pinMode(BUTTON_PIN, INPUT);
     pinMode(I_SENSE_PIN, INPUT);
+    pinMode(srgPin, INPUT);
 }
 
 GrinderState grinderStatus = IDLE;
