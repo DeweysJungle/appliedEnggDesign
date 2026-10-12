@@ -25,19 +25,19 @@ bool checkStorage(){            //Check if enough beans are available for next c
 void flipFilter(){//Flip the filter and place it back
     s1.write(0);
     delay(750);
-    s1.write(30);
+    s1.write(40);
     delay(300);
     s1.write(0);
     delay(300);
-    s1.write(30);
+    s1.write(40);
     delay(300);
     s1.write(0);
     delay(300);
-    s1.write(30);
+    s1.write(40);
     delay(300);
     s1.write(0);
     delay(300);
-    s1.write(30);
+    s1.write(40);
     delay(300);
     s1.write(0);
     delay(500);
