@@ -11,7 +11,12 @@ Servo s1;
 
 
 bool checkStorage(){            //Check if enough beans are available for next cup
-    if(analogRead(srgPin)>100){ //Arbitrary number that will be determined w/ testing
+    int avgLight = 0;
+    for(int i = 0;i < 50;i++){  //Take the avg of 50 readings
+        avgLight += analogRead(srgPin);
+    }
+    avgLight = avgLight/50;
+    if(avgLight>110){           //110 will be higher than ambient light and low enough to be reached if there are no beans
         return false;           //Return false if the sensor is uncovered by beans
     }
     return true;
