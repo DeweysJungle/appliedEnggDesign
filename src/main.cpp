@@ -3,10 +3,15 @@
 
 #define storage A2
 #define servo 5
-#define button 2
-#define pwm 3
+#define button A5
+#define pwm 11
+#define redled 6
+#define blueled 9
+#define greenled 10
 #define dir 12
 #define led 7
+#define encA 2
+#define encB 3
 
 // pwm vars
 const int minCycle = 32;        // 1/8 max power
@@ -20,6 +25,36 @@ bool buttonState;
 // time variables
 unsigned long now;
 unsigned long lastRampTime;
+
+// Encoder variables
+volatile int encoderCount = 0;
+volatile bool encoderMoved = false;
+int grindtime;
+
+void readEncoder() {
+    if (digitalRead(encA) == digitalRead(encB)) {
+        encoderCount++;
+    } else {
+        encoderCount--;
+    }
+    if(encoderCount>19){
+        encoderCount = 0;
+    }else if(encoderCount<0){
+        encoderCount = 19;
+    }
+
+    encoderMoved = true;
+}
+
+void getGrindTime(){
+    if(encoderCount<6){ //small
+        grindtime = 20;
+    }else if(encoderCount<12){ //medium
+        grindtime = 30;
+    }else{ //large
+        grindtime = 40;
+    }
+}
 
 enum GrinderState {
         IDLE,
@@ -62,6 +97,7 @@ void serialTimer(int t, int t_max, String verb) {
     Serial.print(t_max - t);
     Serial.print(" sec");
 }
+
 void setup() {
     Serial.begin(9600);
 
@@ -76,12 +112,18 @@ void setup() {
 
     pinMode(led, OUTPUT);
     lastRampTime = 0;       // setting ref point
+
+    pinMode(encA, INPUT_PULLUP);
+    pinMode(encB, INPUT_PULLUP);
+
+    attachInterrupt(digitalPinToInterrupt(encA), readEncoder, FALLING);
 }
 
 void loop() {
     now = millis();         // setting time
     buttonState = digitalRead(button);
     digitalWrite(led, HIGH);
+    getGrindTime();         //Read the button
     switch(grinderStatus) {
 
         case IDLE:          // do nothing
